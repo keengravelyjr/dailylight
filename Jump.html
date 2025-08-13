@@ -1,205 +1,30 @@
-<p class="p1">
-  <span class="s1">&lt;!DOCTYPE</span>
-  <span class="s2">html</span>
-  <span class="s1">&gt;</span>
-</p>
-<p class="p2">
-  <span class="s3">&lt;</span>
-  <span class="s1">html</span>
-  <span class="s3">&gt;</span>
-</p>
-<p class="p2">
-  <span class="s3">&lt;</span>
-  <span class="s1">head</span>
-  <span class="s3">&gt;</span>
-</p>
-<p class="p3">
-  <span class="s3">
-    <span class="Apple-converted-space">&nbsp;</span>&lt;
-  </span>
-  <span class="s4">meta</span> 
-  <span class="s1">charset</span>
-  <span class="s3">=</span>
-  <span class="s5">"UTF-8"</span>
-  <span class="s3">&gt;</span>
-</p>
-<p class="p4">
-  <span class="s1">
-    <span class="Apple-converted-space">&nbsp;</span>&lt;
-  </span>
-  <span class="s4">title</span>
-  <span class="s1">&gt;Daily Light - Jump to Today&lt;/</span>
-  <span class="s4">title</span>
-  <span class="s1">&gt;</span>
-</p>
-<p class="p2">
-  <span class="s3">
-    <span class="Apple-converted-space">&nbsp;</span>&lt;
-  </span>
-  <span class="s1">script</span>
-  <span class="s3">&gt;</span>
-</p>
-<p class="p4">
-  <span class="s1">
-    <span class="Apple-converted-space">&nbsp; &nbsp;</span>
-  </span>
-  <span class="s2">const</span>
-  <span class="s1">months = [</span>
-</p>
-<p class="p5">
-  <span class="s3">
-    <span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;</span>
-  </span>
-  <span class="s1">"January"</span>
-  <span class="s3">,</span>
-  <span class="s1">"February"</span>
-  <span class="s3">,</span>
-  <span class="s1">"March"</span>
-  <span class="s3">,</span>
-  <span class="s1">"April"</span>
-  <span class="s3">,</span>
-  <span class="s1">"May"</span>
-  <span class="s3">,</span>
-  <span class="s1">"June"</span>
-  <span class="s3">,</span>
-</p>
-<p class="p5">
-  <span class="s3">
-    <span class="Apple-converted-space">&nbsp; &nbsp; &nbsp;</span>
-  </span>
-  <span class="s1">"July"</span>
-  <span class="s3">,</span>
-  <span class="s1">"August"</span>
-  <span class="s3">,</span>
-  <span class="s1">"September"</span>
-  <span class="s3">,</span>
-  <span class="s1">"October"</span>
-  <span class="s3">,</span>
-  <span class="s1">"November"</span>
-  <span class="s3">,</span>
-  <span class="s1">"December"</span>
-</p>
-<p class="p4">
-  <span class="s1">
-    <span class="Apple-converted-space">&nbsp; &nbsp;</span>];
-  </span>
-</p>
-<p class="p6">
-  <br>
-</p>
-<p class="p4">
-  <span class="s1">
-    <span class="Apple-converted-space">&nbsp; &nbsp;</span>
-  </span>
-  <span class="s2">const</span>
-  <span class="s1">today =</span>
-  <span class="s2">new</span>
-  <span class="s1">Date();</span>
-</p>
-<p class="p4">
-  <span class="s1">
-    <span class="Apple-converted-space">&nbsp; &nbsp;</span>
-  </span>
-  <span class="s2">const</span>
-  <span class="s1">monthName = months[today.getMonth()];</span>
-</p>
-<p class="p4">
-  <span class="s1">
-    <span class="Apple-converted-space">&nbsp; &nbsp;</span>
-  </span>
-  <span class="s2">const</span>
-  <span class="s1">day = today.getDate();</span>
-  <span class="s6">// no leading zero</span>
-</p>
-<p class="p6">
-  <br>
-</p>
-<p class="p7">
-  <span class="s3">
-    <span class="Apple-converted-space">&nbsp; &nbsp;</span>
-  </span>
-  <span class="s1">// Your published Google Site base URL</span>
-</p>
-<p class="p5">
-  <span class="s3">
-    <span class="Apple-converted-space">&nbsp; &nbsp;</span>
-  </span>
-  <span class="s2">const</span>
-  <span class="s3">baseURL =</span>
-  <span class="s1">"https://sites.google.com/view/dailylightnlt"</span>
-  <span class="s3">;</span>
-</p>
-<p class="p6">
-  <br>
-</p>
-<p class="p7">
-  <span class="s3">
-    <span class="Apple-converted-space">&nbsp; &nbsp;</span>
-  </span>
-  <span class="s1">// Build the target link in Month-Day format</span>
-</p>
-<p class="p2">
-  <span class="s3">
-    <span class="Apple-converted-space">&nbsp; &nbsp;</span>
-  </span>
-  <span class="s2">const</span>
-  <span class="s3">targetURL =</span>
-  <span class="s5">`</span>
-  <span class="s1">${baseURL}</span>
-  <span class="s5">/</span>
-  <span class="s1">${monthName}</span>
-  <span class="s5">-</span>
-  <span class="s1">${day}</span>
-  <span class="s5">`</span>
-  <span class="s3">;</span>
-</p>
-<p class="p6">
-  <br>
-</p>
-<p class="p7">
-  <span class="s3">
-    <span class="Apple-converted-space">&nbsp; &nbsp;</span>
-  </span>
-  <span class="s1">// Redirect</span>
-</p>
-<p class="p4">
-  <span class="s1">
-    <span class="Apple-converted-space">&nbsp; &nbsp;</span>window.location.href = targetURL;
-  </span>
-</p>
-<p class="p2">
-  <span class="s3">
-    <span class="Apple-converted-space">&nbsp;</span>&lt;/
-  </span>
-  <span class="s1">script</span>
-  <span class="s3">&gt;</span>
-</p>
-<p class="p2">
-  <span class="s3">&lt;/</span>
-  <span class="s1">head</span>
-  <span class="s3">&gt;</span>
-</p>
-<p class="p2">
-  <span class="s3">&lt;</span>
-  <span class="s1">body</span>
-  <span class="s3">&gt;</span>
-</p>
-<p class="p4">
-  <span class="s1">
-    <span class="Apple-converted-space">&nbsp;</span>&lt;
-  </span>
-  <span class="s4">p</span>
-  <span class="s1">&gt;Redirecting to today's Daily Light reading...&lt;/</span>
-  <span class="s4">p</span>
-  <span class="s1">&gt;</span>
-</p>
-<p class="p2">
-  <span class="s3">&lt;/</span>
-  <span class="s1">body</span>
-  <span class="s3">&gt;</span>
-</p>
-<p class="p2">
-  <span class="s3">&lt;/</span>
-  <span class="s1">html</span>
-  <span class="s3">&gt;</span>
-</p>
+// comment - attempt to use the co-pilot version of index as jump.html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Daily Light - Jump to Today</title>
+  <script>
+    const months = [
+      "January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"
+    ];
+
+    const today = new Date();
+    const monthName = months[today.getMonth()];
+    const day = today.getDate(); // no leading zero
+
+    // Your published Google Site base URL
+    const baseURL = "https://sites.google.com/view/dailylightnlt";
+
+    // Build the target link in Month-Day format (no spaces around slashes or dashes)
+    const targetURL = `${baseURL}/${monthName}-${day}`;
+
+    // Redirect
+    window.location.href = targetURL;
+  </script>
+</head>
+<body>
+  <p>Redirecting to today's Daily Light reading...</p>
+</body>
+</html>
